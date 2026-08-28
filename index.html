@@ -1,25 +1,11 @@
-<!doctype html>
-<html lang="zh-HK">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>長洲海濱夾公仔</title>
-  <link rel="stylesheet" href="style.css?v=2"><style>.game{min-height:0!important;height:100vh!important;height:100dvh!important}.result-card h2{font-size:clamp(26px,3vw,40px);line-height:1.12}</style>
-</head>
-<body>
-<main id="game" class="game">
-  <div class="backdrop"></div><div class="grain"></div>
-  <header class="masthead"><div><small>CHEUNG CHAU HARBOUR CLAW</small><h1>長洲海濱<br>夾公仔</h1></div><div class="stats"><span><i>現有分數</i><b id="balance">0</b><em>分</em></span><span><i>每次</i><b>200</b><em>分</em></span></div></header>
-  <section class="machine" aria-label="夾公仔機">
-    <div class="machine-top"><span>海島珍藏</span><i>ISLAND PRIZE</i><div class="bulbs" aria-hidden="true"></div></div>
-    <div class="cabinet">
-      <div class="rail"><div id="carriage" class="carriage"><span class="cable"></span><div id="claw" class="claw"><i></i><b class="arm left"></b><b class="arm right"></b></div></div></div>
-      <div id="prizeField" class="prize-field"></div><div class="floor"></div><div class="chute"><span>PRIZE</span></div>
-    </div>
-    <div class="console"><div class="status"><small id="roundLabel">準備投入</small><strong id="message">每次遊戲 200 分</strong></div><div class="controls"><button id="left" aria-label="向左">←</button><button id="drop" class="drop">落爪</button><button id="right" aria-label="向右">→</button></div><button id="returnStory" class="return">回到故事 →</button></div>
-  </section>
-  <div id="startModal" class="modal"><section><small>HARBOUR NIGHT MARKET</small><h2>今晚想帶邊隻返屋企？</h2><p>投入 200 分，按住左右移動夾爪；對準公仔後按「落爪」。每局只有一次機會。</p><div class="cost"><span>遊戲費用</span><b>200 分</b></div><button id="start">投入 200 分開始</button><p id="startMessage" class="notice"></p></section></div>
-  <div id="resultModal" class="modal hidden"><section class="result-card"><small id="resultEyebrow">PRIZE GET</small><div id="resultToy" class="result-toy"></div><h2 id="resultTitle"></h2><p id="resultText"></p><div class="result-actions"><button id="again">再玩一次・200 分</button><button id="close" class="ghost">收起</button></div></section></div>
-</main>
-<script src="game.js?v=2"></script>
-</body></html>
+<!doctype html><html lang="zh-HK"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>長洲海濱 3D 夾公仔</title><link rel="stylesheet" href="style.css?v=3"><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js"}}</script></head><body>
+<main id="game" class="game"><div class="harbour"></div><canvas id="scene" aria-label="3D 夾公仔機"></canvas><div class="vignette"></div>
+<header class="brand"><small>CHEUNG CHAU HARBOUR CLAW</small><h1>長洲海濱<br><em>3D 夾公仔</em></h1></header>
+<section class="hud"><div><small>現有分數</small><b id="balance">0</b><i>分</i></div><div><small>每次遊戲</small><b>200</b><i>分</i></div><div><small>收藏</small><b id="collectionCount">0</b><i>隻</i></div></section>
+<section class="machine-sign"><span>海島珍藏</span><small>ISLAND PRIZE DEPOT</small></section>
+<section class="status"><small id="roundLabel">READY</small><strong id="message">投入 200 分開始</strong><div class="strength"><i id="strengthFill"></i></div></section>
+<section class="controls" aria-label="操作台"><button id="left" aria-label="夾爪向左"><span>←</span><i>LEFT</i></button><button id="drop" class="drop"><span>落爪</span><i>DROP</i></button><button id="right" aria-label="夾爪向右"><span>→</span><i>RIGHT</i></button></section>
+<button id="returnStory" class="return">回到故事 <span>→</span></button>
+<div id="startModal" class="modal"><section><small>WELCOME TO THE HARBOUR ARCADE</small><h2>今晚，帶一隻<br>長洲回憶返屋企。</h2><p>按住左右移動 3D 夾爪，觀察公仔位置及重心，再按「落爪」。準繩度越高，夾力越穩。</p><div class="price"><span>PLAY CREDIT</span><b>200 分／次</b></div><button id="start">投入 200 分</button><p id="startMessage" class="notice"></p></section></div>
+<div id="resultModal" class="modal hidden"><section class="result"><small id="resultEyebrow">PRIZE CAPTURED</small><div id="resultPreview"></div><h2 id="resultTitle"></h2><p id="resultText"></p><div class="actions"><button id="again">再玩一次・200 分</button><button id="close" class="ghost">留在機台</button></div></section></div>
+<div id="loading" class="loading"><i></i><span>正在亮起機台燈光…</span></div></main><script type="module" src="game.js?v=3"></script></body></html>

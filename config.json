@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "settings": {"playCost":200,"startingCredits":1000,"moveSpeed":0.72,"grabRange":7.5},
+  "prizes": [
+    {"id":"bun-bear","name":"平安包熊","color":"#d95b46","rarity":"人氣款","grip":0.82},
+    {"id":"ferry-cat","name":"渡輪貓","color":"#5f9d9a","rarity":"海島款","grip":0.75},
+    {"id":"wind-surf-rabbit","name":"滑浪兔","color":"#e4a34b","rarity":"觀音灣款","grip":0.68},
+    {"id":"harbour-seal","name":"海灣小海豹","color":"#8aa5b3","rarity":"稀有款","grip":0.58},
+    {"id":"pirate-dog","name":"張保仔小狗","color":"#9c5d48","rarity":"傳說款","grip":0.45},
+    {"id":"mango-duck","name":"芒果糯米糍鴨","color":"#edc754","rarity":"甜品款","grip":0.72}
+  ]
+}
